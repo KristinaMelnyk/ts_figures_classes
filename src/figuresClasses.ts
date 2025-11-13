@@ -11,16 +11,12 @@ function roundDownHundredths(n: number): number {
 export class Triangle implements Figure {
   public readonly shape: 'triangle' = 'triangle';
 
-  public color: 'red' | 'green' | 'blue';
-
   constructor(
-    color: 'red' | 'green' | 'blue',
+    public color: 'red' | 'green' | 'blue',
     public a: number,
     public b: number,
     public c: number,
   ) {
-    this.color = color;
-
     if (a <= 0 || b <= 0 || c <= 0) {
       throw new Error('All sides must be > 0');
     }
@@ -43,14 +39,10 @@ export class Triangle implements Figure {
 export class Circle implements Figure {
   public readonly shape: 'circle' = 'circle';
 
-  public color: 'red' | 'green' | 'blue';
-
   constructor(
-    color: 'red' | 'green' | 'blue',
+    public color: 'red' | 'green' | 'blue',
     public radius: number,
   ) {
-    this.color = color;
-
     if (radius <= 0) {
       throw new Error('Radius must be > 0');
     }
@@ -66,15 +58,11 @@ export class Circle implements Figure {
 export class Rectangle implements Figure {
   public readonly shape: 'rectangle' = 'rectangle';
 
-  public color: 'red' | 'green' | 'blue';
-
   constructor(
-    color: 'red' | 'green' | 'blue',
+    public color: 'red' | 'green' | 'blue',
     public width: number,
     public height: number,
   ) {
-    this.color = color;
-
     if (width <= 0 || height <= 0) {
       throw new Error('Width and height must be > 0');
     }
